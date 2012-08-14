@@ -9,6 +9,9 @@ return array(
     'basePath' => dirname(__FILE__) . DIRECTORY_SEPARATOR . '..',
     'name' => 'Yii: Tactics Modules Showcase',
 
+    'sourceLanguage' => '00',
+    'language' => 'ru',
+
     // preloading 'log' component
     'preload' => array('log'),
 
@@ -23,14 +26,15 @@ return array(
 
     'modules' => array(
         // uncomment the following to enable the Gii tool
-        /*
-          'gii'=>array(
-              'class'=>'system.gii.GiiModule',
-              'password'=>'Enter Your Password Here',
-              // If removed, Gii defaults to localhost only. Edit carefully to taste.
-              'ipFilters'=>array('127.0.0.1','::1'),
-          ),
-          */
+
+        'gii' => array(
+            'class' => 'system.gii.GiiModule',
+            'password' => '12345',
+            // If removed, Gii defaults to localhost only. Edit carefully to taste.
+            'ipFilters' => array('*'),
+        ),
+
+        'adminGen',
 
         'imagesHolder' => array(
             'types' => array(
@@ -87,10 +91,17 @@ return array(
             'rules' => array(
                 'page/<id:[\w\-]+>' => 'staticPages/staticPages/view',
 
+                'gii' => 'gii',
+                'gii/<controller:\w+>' => 'gii/<controller>',
+                'gii/<controller:\w+>/<action:\w+>' => 'gii/<controller>/<action>',
+
                 '<controller:\w+>/<id:\d+>' => '<controller>/view',
                 '<controller:\w+>/<action:\w+>/<id:\d+>' => '<controller>/<action>',
                 '<controller:\w+>/<action:\w+>' => '<controller>/<action>',
             ),
+        ),
+        'request' => array(
+            'baseUrl' => '',
         ),
 
 
