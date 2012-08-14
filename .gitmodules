@@ -10,3 +10,6 @@
 [submodule "protected/modules/imagesHolder"]
 	path = protected/modules/imagesHolder
 	url = git@github.com:alari/yii-imagesHolder.git
+[submodule "protected/modules/user"]
+	path = protected/modules/user
+	url = git@github.com:alari/yii-user.git
