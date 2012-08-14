@@ -1,5 +1,7 @@
 .idea
 *.log
-/assets
+/assets/*
 *.swp
 *~
+/nbproject/private/
+/protected/runtime/*
