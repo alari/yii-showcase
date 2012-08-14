@@ -65,5 +65,7 @@
 </div>
 <!-- page -->
 
+<?$this->widget('adminGen.widgets.AdminCorner')?>
+
 </body>
 </html>

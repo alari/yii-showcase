@@ -3,5 +3,5 @@
 /assets/*
 *.swp
 *~
-/nbproject/private/
+/nbproject
 /protected/runtime/*
