@@ -14,6 +14,7 @@ git submodule add git://github.com/alari/yii-staticPages.git protected/modules/s
 git submodule add git://github.com/alari/yii-imagesHolder.git protected/modules/imagesHolder
 git submodule add git://github.com/alari/yii-user.git protected/modules/user
 git submodule add git://github.com/alari/yii-i18n2ascii.git protected/extensions/i18n2ascii
+git submodule add git://github.com/alari/yii-adminGen.git protected/modules/adminGen
 ```
 
 Migrations
