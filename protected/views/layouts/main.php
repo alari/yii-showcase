@@ -1,4 +1,14 @@
-<?php /* @var $this Controller */ ?>
+<?php /* @var $this Controller */
+$mainMenu = array(array('label' => 'Home', 'url' => array('/site/index')),
+    array('label' => 'About', 'url' => array('/site/page', 'view' => 'about')),
+    array('label' => 'Contact', 'url' => array('/site/contact')),
+    array('url' => Yii::app()->getModule('user')->loginUrl, 'label' => Yii::app()->getModule('user')->t("Login"), 'visible' => Yii::app()->user->isGuest),
+    array('url' => Yii::app()->getModule('user')->registrationUrl, 'label' => Yii::app()->getModule('user')->t("Register"), 'visible' => Yii::app()->user->isGuest),);
+$pages = Yii::app()->getModule("staticPages")->mainMenuLinks();
+if(count($pages)) {
+    foreach($pages as $p) $mainMenu[] = $p;
+}
+?>
 <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN"
     "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
 <html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
@@ -33,15 +43,7 @@
 
     <div id="mainmenu">
         <?php $this->widget('zii.widgets.CMenu', array(
-        'items' => array(
-            array('label' => 'Home', 'url' => array('/site/index')),
-            array('label' => 'About', 'url' => array('/site/page', 'view' => 'about')),
-            array('label' => 'Contact', 'url' => array('/site/contact')),
-            array('url' => Yii::app()->getModule('user')->loginUrl, 'label' => Yii::app()->getModule('user')->t("Login"), 'visible' => Yii::app()->user->isGuest),
-            array('url' => Yii::app()->getModule('user')->registrationUrl, 'label' => Yii::app()->getModule('user')->t("Register"), 'visible' => Yii::app()->user->isGuest),
-            array('url' => Yii::app()->getModule('user')->profileUrl, 'label' => Yii::app()->getModule('user')->t("Profile"), 'visible' => !Yii::app()->user->isGuest),
-            array('url' => Yii::app()->getModule('user')->logoutUrl, 'label' => Yii::app()->getModule('user')->t("Logout") . ' (' . Yii::app()->user->name . ')', 'visible' => !Yii::app()->user->isGuest),
-        ),
+        'items' => $mainMenu
     )); ?>
     </div>
     <!-- mainmenu -->

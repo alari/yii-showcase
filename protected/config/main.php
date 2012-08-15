@@ -34,6 +34,9 @@ return array(
             'password' => '12345',
             // If removed, Gii defaults to localhost only. Edit carefully to taste.
             'ipFilters' => array('*'),
+            'generatorPaths' => array(
+                'ext.giix.generators', // giix generators
+            ),
         ),
 
         'adminGen',
