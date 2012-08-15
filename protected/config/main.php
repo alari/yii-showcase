@@ -22,6 +22,8 @@ return array(
         // For user module
         'application.modules.user.models.*',
         'application.modules.user.components.*',
+        // For giix
+        'ext.giix.components.*',
     ),
 
     'modules' => array(

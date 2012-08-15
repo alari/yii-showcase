@@ -16,3 +16,6 @@
 [submodule "protected/modules/adminGen"]
 	path = protected/modules/adminGen
 	url = git@github.com:alari/yii-adminGen.git
+[submodule "protected/extensions/giix"]
+	path = protected/extensions/giix
+	url = git://github.com/alari/giix.git
