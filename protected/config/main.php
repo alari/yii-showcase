@@ -61,7 +61,7 @@ return array(
                     'default' => 'big',
                     'sizes' => array(
                         "big" => "300x300",
-                        "tiny" => "60x60 crop"
+                        "tiny" => "600x600"
                     )
                 ),
             )
