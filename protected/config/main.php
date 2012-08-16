@@ -17,6 +17,9 @@ return array(
 
     // autoloading model and component classes
     'import' => array(
+        // For imagesHolder
+        'application.modules.imagesHolder.models.*',
+        // Defaults
         'application.models.*',
         'application.components.*',
         // For user module
@@ -43,15 +46,24 @@ return array(
 
         'imagesHolder' => array(
             'types' => array(
-                'materialSlides' => array(
-                    'maxNum' => 0,
+                'pic' => array(
+                    'maxNum' => 1,
                     'preview' => 'tiny',
                     'default' => 'big',
                     'sizes' => array(
                         "big" => "800x600",
-                        "tiny" => "120x120"
+                        "tiny" => "120x120 thumb"
                     )
-                )
+                ),
+                'list' => array(
+                    'maxNum' => 0,
+                    'preview' => 'tiny',
+                    'default' => 'big',
+                    'sizes' => array(
+                        "big" => "300x300",
+                        "tiny" => "60x60 crop"
+                    )
+                ),
             )
         ),
 
@@ -72,8 +84,8 @@ return array(
             "regions" => array(
                 "" => "-",
             ),
-            //'view' => '//??? whatever view',
-            //'modelClass' => 'StaticPage'
+            'view' => '//showcase/staticPage',
+            'modelClass' => 'Page'
         ),
     ),
 
