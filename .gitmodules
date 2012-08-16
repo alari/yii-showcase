@@ -19,3 +19,6 @@
 [submodule "protected/extensions/giix"]
 	path = protected/extensions/giix
 	url = git://github.com/alari/giix.git
+[submodule "protected/extensions/imagine"]
+	path = protected/extensions/imagine
+	url = git@github.com:alari/yii-imagine.git

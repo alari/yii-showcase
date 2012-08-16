@@ -139,11 +139,9 @@ return array(
             ),
         ),
 
-        'image' => array(
-            'class' => 'imagesHolder.extensions.image.CImageComponent',
-            // GD or ImageMagick
-            'driver' => 'GD',
-        ),
+        'imagine' => array(
+            'class' => "ext.imagine.ImagineYii"
+        )
     ),
 
     // application-level parameters that can be accessed

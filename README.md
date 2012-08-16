@@ -16,6 +16,7 @@ git submodule add git://github.com/alari/yii-user.git protected/modules/user
 git submodule add git://github.com/alari/yii-i18n2ascii.git protected/extensions/i18n2ascii
 git submodule add git://github.com/alari/yii-adminGen.git protected/modules/adminGen
 git submodule add git://github.com/alari/giix.git protected/extensions/giix
+git submodule add git://github.com/alari/yii-imagine.git protected/extensions/imagine
 ```
 
 Migrations
