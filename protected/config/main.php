@@ -20,7 +20,7 @@ return array(
         // For imagesHolder
         'application.modules.imagesHolder.models.*',
         // Defaults
-        'application.models.*',
+
         'application.components.*',
         // For user module
         'application.modules.user.models.*',
@@ -43,6 +43,8 @@ return array(
         ),
 
         'adminGen',
+
+        'catalogue',
 
         'imagesHolder' => array(
             'types' => array(
