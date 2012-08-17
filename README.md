@@ -3,7 +3,29 @@ yii-showcase
 
 Showcase for tactic modules
 
-How to
+How to install
+============
+
+```
+git clone git@github.com:alari/yii-showcase.git
+cd yii-showcase
+
+git submodule init
+git submodule update
+
+mkdir assets
+chmod a+w assets
+mkdir protected/runtime
+chmod a+w protected/runtime
+
+cd protected
+./yiic migrate --migrationPath=imagesHolder.migrations
+./yiic migrate --migrationPath=staticPages.migrations
+./yiic migrate --migrationPath=user.migrations
+./yiic migrate
+```
+
+How to create something similar
 ============
 ```
 git submodule add git://github.com/alari/yii-framework.git framework
@@ -19,16 +41,6 @@ git submodule add git://github.com/alari/giix.git protected/extensions/giix
 git submodule add git://github.com/alari/yii-imagine.git protected/extensions/imagine
 
 git submodule -q foreach git pull -q origin master
-```
-
-Migrations
-============
-```
-cd protected
-./yiic migrate --migrationPath=imagesHolder.migrations
-./yiic migrate --migrationPath=staticPages.migrations
-./yiic migrate --migrationPath=user.migrations
-./yiic migrate
 ```
 
 Giix config
