@@ -22,3 +22,6 @@
 [submodule "protected/extensions/imagine"]
 	path = protected/extensions/imagine
 	url = git@github.com:alari/yii-imagine.git
+[submodule "protected/modules/catalogue"]
+	path = protected/modules/catalogue
+	url = git@github.com:alari/yii-catalogue.git
