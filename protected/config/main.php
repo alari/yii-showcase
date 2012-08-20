@@ -28,6 +28,8 @@ return array(
         'application.modules.user.components.*',
         // For giix
         'ext.giix.components.*',
+        // For catalogue
+        'application.modules.catalogue.models.*',
     ),
 
     'modules' => array(
