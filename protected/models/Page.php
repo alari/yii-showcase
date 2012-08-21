@@ -8,20 +8,23 @@
  */
 class Page extends StaticPage implements ImagesHolderModel
 {
-    public function rules() {
+    public function rules()
+    {
         $rules = parent::rules();
         $rules [] = array('pic_holder_id, list_holder_id', 'default', 'setOnEmpty' => true, 'value' => null);
         return $rules;
     }
 
-    public function relations() {
+    public function relations()
+    {
         $relations = parent::relations();
         $relations['listHolder'] = array(self::BELONGS_TO, 'ImagesHolder', 'list_holder_id');
         $relations['picHolder'] = array(self::BELONGS_TO, 'ImagesHolder', 'pic_holder_id');
         return $relations;
     }
 
-    public function formInjection() {
+    public function formInjection()
+    {
 
     }
 
@@ -36,11 +39,12 @@ class Page extends StaticPage implements ImagesHolderModel
         );
     }
 
-    public function behaviors() {
-        return array(
-            'imagesHolder' => array(
-                'class' => 'imagesHolder.models.ImagesHolderBehavior'
-            )
+    public function behaviors()
+    {
+        $behaviors = parent::behaviors();
+        $behaviors['imagesHolder'] = array(
+            'class' => 'imagesHolder.models.ImagesHolderBehavior'
         );
+        return $behaviors;
     }
 }
