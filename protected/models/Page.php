@@ -25,11 +25,6 @@ class Page extends StaticPage implements ImagesHolderModel
 
     }
 
-    public function afterSave() {
-        parent::afterSave();
-        Yii::app()->getModule("imagesHolder")->saveModel($this);
-    }
-
     /**
      * @return array
      */
@@ -38,6 +33,14 @@ class Page extends StaticPage implements ImagesHolderModel
         return array(
             "list_holder_id" => "list",
             "pic_holder_id" => "pic"
+        );
+    }
+
+    public function behaviors() {
+        return array(
+            'imagesHolder' => array(
+                'class' => 'imagesHolder.models.ImagesHolderBehavior'
+            )
         );
     }
 }
