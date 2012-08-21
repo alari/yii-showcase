@@ -6,7 +6,7 @@
  * @property ImagesHolder $listHolder
  * @property ImagesHolder $picHolder
  */
-class Cat extends Category implements ImagesHolderModel
+class Category extends CatalogueCategory implements ImagesHolderModel
 {
     public function rules() {
         $rules = parent::rules();
