@@ -47,7 +47,9 @@ return array(
 
         'adminGen',
 
-        'catalogue',
+        'catalogue'=>array(
+            'categoryModelClass' => 'Cat'
+        ),
 
         'imagesHolder' => array(
             'types' => array(
