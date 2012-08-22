@@ -27,4 +27,4 @@
 	url = git@github.com:alari/yii-catalogue.git
 [submodule "protected/extensions/yiiext/behaviors/activerecord-relation"]
 	path = protected/extensions/yiiext/behaviors/activerecord-relation
-	url = https://github.com/yiiext/activerecord-relation-behavior.git
+	url = git://github.com/yiiext/activerecord-relation-behavior.git

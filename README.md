@@ -1,7 +1,7 @@
 yii-showcase
 ============
 
-Showcase for tactic modules
+Showcase for Tactic Shared Components
 
 How to install
 ============
@@ -39,6 +39,8 @@ git submodule add git://github.com/alari/yii-i18n2ascii.git protected/extensions
 git submodule add git://github.com/alari/yii-adminGen.git protected/modules/adminGen
 git submodule add git://github.com/alari/giix.git protected/extensions/giix
 git submodule add git://github.com/alari/yii-imagine.git protected/extensions/imagine
+
+git submodule add https://github.com/yiiext/activerecord-relation-behavior.git protected/extensions/yiiext/behaviors/activerecord-relation
 
 git submodule -q foreach git pull -q origin master
 ```
