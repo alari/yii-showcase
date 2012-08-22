@@ -44,11 +44,10 @@ class Product extends CatalogueProduct implements ImagesHolderModel
     # And adding behaviour
 
     public function behaviors()
-    {
-        return array(
-            'imagesHolder' => array(
+    {  $behaviors = parent::behaviors();
+        $behaviors['imagesHolder'] = array(
                 'class' => 'imagesHolder.models.ImagesHolderBehavior'
-            )
-        );
+            );
+        return $behaviors;
     }
 }
