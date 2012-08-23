@@ -30,6 +30,8 @@ return array(
         'ext.giix.components.*',
         // For catalogue
         'application.modules.catalogue.models.*',
+        // For shared core
+        'ext.shared-core.*'
     ),
 
     'modules' => array(
