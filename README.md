@@ -32,6 +32,7 @@ git submodule add git://github.com/alari/yii-framework.git framework
 cd framework
 ./yiic webapp ..
 cd ..
+git submodule add git://github.com/alari/yii-shared-core.git protected/extensions/shared-core
 git submodule add git://github.com/alari/yii-staticPages.git protected/modules/staticPages
 git submodule add git://github.com/alari/yii-imagesHolder.git protected/modules/imagesHolder
 git submodule add git://github.com/alari/yii-user.git protected/modules/user
