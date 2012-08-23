@@ -2,6 +2,7 @@
 $mainMenu = array(array('label' => 'Home', 'url' => array('/site/index')),
     array('label' => 'About', 'url' => array('/site/page', 'view' => 'about')),
     array('label' => 'Contact', 'url' => array('/site/contact')),
+    array('url' => array("/catalogue/category/index"), 'label' => Yii::t("app", "Catalogue"), 'visible' => !Yii::app()->user->isGuest),
     array('url' => Yii::app()->getModule('user')->loginUrl, 'label' => Yii::app()->getModule('user')->t("Login"), 'visible' => Yii::app()->user->isGuest),
     array('url' => Yii::app()->getModule('user')->registrationUrl, 'label' => Yii::app()->getModule('user')->t("Register"), 'visible' => Yii::app()->user->isGuest),);
 $pages = Yii::app()->getModule("staticPages")->mainMenuLinks();

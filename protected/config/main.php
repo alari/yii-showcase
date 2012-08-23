@@ -50,7 +50,8 @@ return array(
         'adminGen',
 
         'catalogue'=>array(
-            'categoryModelClass' => 'Category'
+            'categoryModelClass' => 'Category',
+            'productModelClass' => 'Product'
         ),
 
         'imagesHolder' => array(
@@ -116,6 +117,8 @@ return array(
             'showScriptName' => false,
             'rules' => array(
                 'page/<id:[\w\-]+>' => 'staticPages/staticPages/view',
+
+                'product/<id:[\w\-]+>' => 'catalogue/product/view',
 
                 'gii' => 'gii',
                 'gii/<controller:\w+>' => 'gii/<controller>',
