@@ -19,9 +19,6 @@ mkdir protected/runtime
 chmod a+w protected/runtime
 
 cd protected
-./yiic migrate --migrationPath=imagesHolder.migrations
-./yiic migrate --migrationPath=staticPages.migrations
-./yiic migrate --migrationPath=user.migrations
 ./yiic migrate
 ```
 
