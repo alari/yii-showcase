@@ -2,15 +2,15 @@
 
 class m120821_061145_catImagesHolder extends CDbMigration
 {
-    public function up()
+    public function safeUp()
     {
-        $this->addColumn("{{category}}", "pic_holder_id", "int");
-        $this->addForeignKey("cat_pic", "{{category}}", "pic_holder_id", "{{images_holder}}", "id");
-        $this->addColumn("{{category}}", "list_holder_id", "int");
-        $this->addForeignKey("cat_list", "{{category}}", "list_holder_id", "{{images_holder}}", "id");
+        $this->addColumn("{{catalogue_category}}", "pic_holder_id", "int");
+        $this->addForeignKey("cat_pic", "{{catalogue_category}}", "pic_holder_id", "{{images_holder}}", "id");
+        $this->addColumn("{{catalogue_category}}", "list_holder_id", "int");
+        $this->addForeignKey("cat_list", "{{catalogue_category}}", "list_holder_id", "{{images_holder}}", "id");
     }
 
-	public function down()
+	public function safeDown()
 	{
 		echo "m120821_061145_catImagesHolder does not support migration down.\n";
 		return false;

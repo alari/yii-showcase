@@ -21,11 +21,6 @@ class Category extends CatalogueCategory implements ImagesHolderModel
         return $relations;
     }
 
-    public function afterSave() {
-        parent::afterSave();
-        Yii::app()->getModule("imagesHolder")->saveModel($this);
-    }
-
     /**
      * @return array
      */
@@ -35,6 +30,14 @@ class Category extends CatalogueCategory implements ImagesHolderModel
             "list_holder_id" => "list",
             "pic_holder_id" => "pic"
         );
+    }
+
+    public function behaviors() {
+        $behaviors = parent::behaviors();
+        $behaviors['imagesHolder'] = array(
+            'class' => 'imagesHolder.models.ImagesHolderBehavior'
+        );
+        return $behaviors;
     }
 
 }
