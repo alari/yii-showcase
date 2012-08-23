@@ -65,7 +65,8 @@ return array(
         ),
 
         'imagesHolder',
-        'staticPages'
+        'staticPages',
+        'catalogue',
         #...
     ),
 );
