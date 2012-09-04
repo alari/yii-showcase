@@ -31,7 +31,8 @@ return array(
         // For catalogue
         'application.modules.catalogue.models.*',
         // For shared core
-        'ext.shared-core.*'
+        'ext.shared-core.*',
+        'ext.shared-core.form.*'
     ),
 
     'modules' => array(
