@@ -31,6 +31,6 @@
 [submodule "protected/extensions/shared-core"]
 	path = protected/extensions/shared-core
 	url = git@github.com:alari/yii-shared-core.git
-[submodule "protected/extensions/yiiext/commands.migrate"]
-	path = protected/extensions/yiiext/commands.migrate
+[submodule "protected/extensions/yiiext/commands/migrate"]
+	path = protected/extensions/yiiext/commands/migrate
 	url = https://github.com/yiiext/migrate-command
