@@ -1,13 +1,31 @@
-<?php
+<?
 /**
- * @author alari
- * @since 8/16/12 12:28 PM
+ * @author Egor
+ * @since 8/21/12 18:28 PM
  *
  * @property ImagesHolder $listHolder
  * @property ImagesHolder $picHolder
  */
-class Page extends StaticPage implements ImagesHolderModel
+class Product extends CatalogueProduct implements ImagesHolderModel
 {
+
+    #...
+
+    /**
+     * @return array
+     */
+    public function imageHolders()
+    {
+        return array(
+            "list_holder_id" => "list",
+            "pic_holder_id" => "pic"
+        );
+    }
+
+    #...
+
+    # Don't forget to note your relations in relations() and rules() methods (this could be done with giix)
+
     public function rules()
     {
         $rules = parent::rules();
@@ -23,28 +41,13 @@ class Page extends StaticPage implements ImagesHolderModel
         return $relations;
     }
 
-    public function formInjection()
-    {
-
-    }
-
-    /**
-     * @return array
-     */
-    public function imageHolders()
-    {
-        return array(
-            "list_holder_id" => "list",
-            "pic_holder_id" => "pic"
-        );
-    }
+    # And adding behaviour
 
     public function behaviors()
-    {
-        $behaviors = parent::behaviors();
+    {  $behaviors = parent::behaviors();
         $behaviors['imagesHolder'] = array(
-            'class' => 'imagesHolder.models.ImagesHolderBehavior'
-        );
+                'class' => 'imagesHolder.models.ImagesHolderBehavior'
+            );
         return $behaviors;
     }
 }

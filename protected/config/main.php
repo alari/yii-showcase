@@ -21,12 +21,18 @@ return array(
         'application.modules.imagesHolder.models.*',
         // Defaults
         'application.models.*',
+
         'application.components.*',
         // For user module
         'application.modules.user.models.*',
         'application.modules.user.components.*',
         // For giix
         'ext.giix.components.*',
+        // For catalogue
+        'application.modules.catalogue.models.*',
+        // For shared core
+        'ext.shared-core.*',
+        'ext.shared-core.form.*'
     ),
 
     'modules' => array(
@@ -43,6 +49,11 @@ return array(
         ),
 
         'adminGen',
+
+        'catalogue'=>array(
+            'categoryModelClass' => 'Category',
+            'productModelClass' => 'Product'
+        ),
 
         'imagesHolder' => array(
             'types' => array(
@@ -107,6 +118,8 @@ return array(
             'showScriptName' => false,
             'rules' => array(
                 'page/<id:[\w\-]+>' => 'staticPages/staticPages/view',
+
+                'product/<id:[\w\-]+>' => 'catalogue/product/view',
 
                 'gii' => 'gii',
                 'gii/<controller:\w+>' => 'gii/<controller>',

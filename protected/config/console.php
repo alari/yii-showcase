@@ -9,6 +9,16 @@ return array(
 	// preloading 'log' component
 	'preload'=>array('log'),
 
+    'commandMap' => array(
+        'migrate' => array(
+            // alias of the path where you extracted the zip file
+            'class' => 'application.extensions.yiiext.commands.migrate.EMigrateCommand',
+            'applicationModuleName' => 'showcase',
+            'connectionID'=>'db',
+            'templateFile'=>'application.db.migration_template',
+        ),
+    ),
+
 	// application components
 	'components'=>array(
         'db' => array(
@@ -65,7 +75,8 @@ return array(
         ),
 
         'imagesHolder',
-        'staticPages'
+        'staticPages',
+        'catalogue',
         #...
     ),
 );
